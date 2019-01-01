@@ -10,7 +10,6 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 
 /**
  * 代码清单 11-2 添加 HTTP 支持
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 

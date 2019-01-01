@@ -7,7 +7,6 @@ import static io.netty.channel.DummyChannelPipeline.DUMMY_INSTANCE;
 
 /**
  * 代码清单 6-5 修改 ChannelPipeline
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class ModifyChannelPipeline {
@@ -15,7 +14,7 @@ public class ModifyChannelPipeline {
 
     /**
      * 代码清单 6-5 修改 ChannelPipeline
-     * */
+     */
     public static void modifyPipeline() {
         ChannelPipeline pipeline = CHANNEL_PIPELINE_FROM_SOMEWHERE; // get reference to pipeline;
         //创建一个 FirstHandler 的实例
@@ -36,22 +35,22 @@ public class ModifyChannelPipeline {
     }
 
     private static final class FirstHandler
-        extends ChannelHandlerAdapter {
+            extends ChannelHandlerAdapter {
 
     }
 
     private static final class SecondHandler
-        extends ChannelHandlerAdapter {
+            extends ChannelHandlerAdapter {
 
     }
 
     private static final class ThirdHandler
-        extends ChannelHandlerAdapter {
+            extends ChannelHandlerAdapter {
 
     }
 
     private static final class FourthHandler
-        extends ChannelHandlerAdapter {
+            extends ChannelHandlerAdapter {
 
     }
 }

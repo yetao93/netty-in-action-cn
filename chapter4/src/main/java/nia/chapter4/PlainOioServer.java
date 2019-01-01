@@ -8,7 +8,6 @@ import java.nio.charset.Charset;
 
 /**
  * 代码清单 4-1 未使用 Netty 的阻塞网络编程
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class PlainOioServer {
@@ -16,7 +15,7 @@ public class PlainOioServer {
         //将服务器绑定到指定端口
         final ServerSocket socket = new ServerSocket(port);
         try {
-            for(;;) {
+            for (; ; ) {
                 //接受连接
                 final Socket clientSocket = socket.accept();
                 System.out.println(
@@ -43,7 +42,7 @@ public class PlainOioServer {
                                 // ignore on close
                             }
                         }
-                //启动线程
+                        //启动线程
                     }
                 }).start();
             }

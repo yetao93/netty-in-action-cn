@@ -4,7 +4,6 @@ import java.net.InetSocketAddress;
 
 /**
  * 代码清单 13-1 LogEvent 消息
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public final class LogEvent {
@@ -21,7 +20,7 @@ public final class LogEvent {
 
     //用于传入消息的构造函数
     public LogEvent(InetSocketAddress source, long received,
-        String logfile, String msg) {
+                    String logfile, String msg) {
         this.source = source;
         this.logfile = logfile;
         this.msg = msg;

@@ -12,9 +12,9 @@ import java.nio.charset.Charset;
 
 /**
  * Created by kerr.
- *
+ * <p>
  * 代码清单 1-3 异步地建立连接
- *
+ * <p>
  * 代码清单 1-4 回调实战
  */
 public class ConnectExample {
@@ -22,9 +22,9 @@ public class ConnectExample {
 
     /**
      * 代码清单 1-3 异步地建立连接
-     *
+     * <p>
      * 代码清单 1-4 回调实战
-     * */
+     */
     public static void connect() {
         Channel channel = CHANNEL_FROM_SOMEWHERE; //reference form somewhere
         // Does not block

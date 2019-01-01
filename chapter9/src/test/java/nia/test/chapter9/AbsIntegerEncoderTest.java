@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 
 /**
  * 代码清单9-4 测试 AbsIntegerEncoder
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class AbsIntegerEncoderTest {
@@ -24,7 +23,7 @@ public class AbsIntegerEncoderTest {
 
         //(2) 创建一个EmbeddedChannel，并安装一个要测试的 AbsIntegerEncoder
         EmbeddedChannel channel = new EmbeddedChannel(
-            new AbsIntegerEncoder());
+                new AbsIntegerEncoder());
         //(3) 写入 ByteBuf，并断言调用 readOutbound()方法将会产生数据
         assertTrue(channel.writeOutbound(buf));
         //(4) 将该 Channel 标记为已完成状态

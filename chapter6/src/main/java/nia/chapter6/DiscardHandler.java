@@ -7,7 +7,6 @@ import io.netty.util.ReferenceCountUtil;
 
 /**
  * 代码清单 6-1 释放消息资源
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 @Sharable

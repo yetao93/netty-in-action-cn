@@ -10,7 +10,6 @@ import java.io.Serializable;
 
 /**
  * 代码清单 11-13 使用 JBoss Marshalling
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class MarshallingInitializer extends ChannelInitializer<Channel> {
@@ -36,11 +35,11 @@ public class MarshallingInitializer extends ChannelInitializer<Channel> {
     }
 
     public static final class ObjectHandler
-        extends SimpleChannelInboundHandler<Serializable> {
+            extends SimpleChannelInboundHandler<Serializable> {
         @Override
         public void channelRead0(
-            ChannelHandlerContext channelHandlerContext,
-            Serializable serializable) throws Exception {
+                ChannelHandlerContext channelHandlerContext,
+                Serializable serializable) throws Exception {
             // Do something
         }
     }

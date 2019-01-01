@@ -13,7 +13,6 @@ import java.util.Set;
 
 /**
  * 代码清单 4-2 未使用 Netty 的异步网络编程
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class PlainNioServer {
@@ -29,7 +28,7 @@ public class PlainNioServer {
         //将ServerSocketChannel注册到Selector以接受连接
         serverChannel.register(selector, SelectionKey.OP_ACCEPT);
         final ByteBuffer msg = ByteBuffer.wrap("Hi!\r\n".getBytes());
-        for (;;){
+        for (; ; ) {
             try {
                 //等待需要处理的新事件；阻塞将一直持续到下一个传入事件
                 selector.select();

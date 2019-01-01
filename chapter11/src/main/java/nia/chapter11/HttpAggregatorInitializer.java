@@ -9,7 +9,6 @@ import io.netty.handler.codec.http.HttpServerCodec;
 
 /**
  * 代码清单 11-3 自动聚合 HTTP 的消息片段
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class HttpAggregatorInitializer extends ChannelInitializer<Channel> {

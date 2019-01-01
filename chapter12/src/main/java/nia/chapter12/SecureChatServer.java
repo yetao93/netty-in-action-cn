@@ -11,7 +11,6 @@ import java.net.InetSocketAddress;
 
 /**
  * 代码清单 12-7 向 ChatServer 添加加密
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //SecureChatServer 扩展 ChatServer 以支持加密
@@ -20,13 +19,6 @@ public class SecureChatServer extends ChatServer {
 
     public SecureChatServer(SslContext context) {
         this.context = context;
-    }
-
-    @Override
-    protected ChannelInitializer<Channel> createInitializer(
-        ChannelGroup group) {
-        //返回之前创建的 SecureChatServerInitializer 以启用加密
-        return new SecureChatServerInitializer(group, context);
     }
 
     public static void main(String[] args) throws Exception {
@@ -47,5 +39,12 @@ public class SecureChatServer extends ChatServer {
             }
         });
         future.channel().closeFuture().syncUninterruptibly();
+    }
+
+    @Override
+    protected ChannelInitializer<Channel> createInitializer(
+            ChannelGroup group) {
+        //返回之前创建的 SecureChatServerInitializer 以启用加密
+        return new SecureChatServerInitializer(group, context);
     }
 }

@@ -6,13 +6,13 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 代码清单 6-11 @Sharable 的错误用法
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //使用注解@Sharable标注
 @Sharable
 public class UnsharableHandler extends ChannelInboundHandlerAdapter {
     private int count;
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         //将 count 字段的值加 1

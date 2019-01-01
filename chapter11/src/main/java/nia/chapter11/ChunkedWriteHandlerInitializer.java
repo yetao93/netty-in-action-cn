@@ -11,13 +11,13 @@ import java.io.FileInputStream;
 
 /**
  * 代码清单 11-12 使用 ChunkedStream 传输文件内容
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class ChunkedWriteHandlerInitializer
-    extends ChannelInitializer<Channel> {
+        extends ChannelInitializer<Channel> {
     private final File file;
     private final SslContext sslCtx;
+
     public ChunkedWriteHandlerInitializer(File file, SslContext sslCtx) {
         this.file = file;
         this.sslCtx = sslCtx;
@@ -35,15 +35,15 @@ public class ChunkedWriteHandlerInitializer
     }
 
     public final class WriteStreamHandler
-        extends ChannelInboundHandlerAdapter {
+            extends ChannelInboundHandlerAdapter {
 
         @Override
         //当连接建立时，channelActive() 方法将使用 ChunkedInput 写文件数据
         public void channelActive(ChannelHandlerContext ctx)
-            throws Exception {
+                throws Exception {
             super.channelActive(ctx);
             ctx.writeAndFlush(
-            new ChunkedStream(new FileInputStream(file)));
+                    new ChunkedStream(new FileInputStream(file)));
         }
     }
 }

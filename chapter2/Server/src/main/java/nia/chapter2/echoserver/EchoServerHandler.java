@@ -10,7 +10,6 @@ import io.netty.util.CharsetUtil;
 
 /**
  * 代码清单 2-1 EchoServerHandler
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //标示一个ChannelHandler可以被多个 Channel 安全地共享
@@ -36,7 +35,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx,
-        Throwable cause) {
+                                Throwable cause) {
         //打印异常栈跟踪
         cause.printStackTrace();
         //关闭该Channel

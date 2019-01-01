@@ -9,14 +9,14 @@ import java.net.Socket;
 
 /**
  * Created by kerr.
- *
+ * <p>
  * 代码清单 1-1 阻塞 I/O 示例
  */
 public class BlockingIoExample {
 
     /**
      * 代码清单 1-1 阻塞 I/O 示例
-     * */
+     */
     public void serve(int portNumber) throws IOException {
         //创建一个新的 ServerSocket，用以监听指定端口上的连接请求
         ServerSocket serverSocket = new ServerSocket(portNumber);
@@ -41,7 +41,7 @@ public class BlockingIoExample {
         }
     }
 
-    private String processRequest(String request){
+    private String processRequest(String request) {
         return "Processed";
     }
 }

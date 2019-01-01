@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * 代码清单9-5 FrameChunkDecoder
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //扩展 ByteToMessageDecoder以将入站字节解码为消息
@@ -23,8 +22,8 @@ public class FrameChunkDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in,
-        List<Object> out)
-        throws Exception {
+                          List<Object> out)
+            throws Exception {
         int readableBytes = in.readableBytes();
         if (readableBytes > maxFrameSize) {
             // discard the bytes

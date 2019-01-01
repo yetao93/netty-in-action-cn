@@ -13,7 +13,6 @@ import java.nio.charset.Charset;
 
 /**
  * Listing 4.3 Blocking networking with Netty
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class NettyOioServer {
@@ -34,7 +33,7 @@ public class NettyOioServer {
                         @Override
                         public void initChannel(SocketChannel ch)
                                 throws Exception {
-                                ch.pipeline().addLast(
+                            ch.pipeline().addLast(
                                     //添加一个 ChannelInboundHandlerAdapter以拦截和处理事件
                                     new ChannelInboundHandlerAdapter() {
                                         @Override

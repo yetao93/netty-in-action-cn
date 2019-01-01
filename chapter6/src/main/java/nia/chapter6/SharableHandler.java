@@ -6,7 +6,6 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 代码清单 6-10 可共享的 ChannelHandler
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //使用注解@Sharable标注

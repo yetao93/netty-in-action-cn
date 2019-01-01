@@ -12,7 +12,6 @@ import javax.net.ssl.SSLEngine;
 
 /**
  * 代码清单 11-5 使用 HTTPS
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 public class HttpsCodecInitializer extends ChannelInitializer<Channel> {

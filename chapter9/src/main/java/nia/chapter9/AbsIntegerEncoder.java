@@ -8,15 +8,14 @@ import java.util.List;
 
 /**
  * 代码清单9-3 AbsIntegerEncoder
- *
  * @author <a href="mailto:norman.maurer@gmail.com">Norman Maurer</a>
  */
 //扩展 MessageToMessageEncoder 以将一个消息编码为另外一种格式
 public class AbsIntegerEncoder extends
-    MessageToMessageEncoder<ByteBuf> {
+        MessageToMessageEncoder<ByteBuf> {
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext,
-        ByteBuf in, List<Object> out) throws Exception {
+                          ByteBuf in, List<Object> out) throws Exception {
         //检查是否有足够的字节用来编码
         while (in.readableBytes() >= 4) {
             //从输入的 ByteBuf中读取下一个整数，并且计算其绝对值
