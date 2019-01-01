@@ -15,6 +15,7 @@ import io.netty.util.CharsetUtil;
 //标示一个ChannelHandler可以被多个 Channel 安全地共享
 @Sharable
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf in = (ByteBuf) msg;
@@ -26,8 +27,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
-    public void channelReadComplete(ChannelHandlerContext ctx)
-            throws Exception {
+    public void channelReadComplete(ChannelHandlerContext ctx) {
         //将未决消息冲刷到远程节点，并且关闭该 Channel
         ctx.writeAndFlush(Unpooled.EMPTY_BUFFER)
                 .addListener(ChannelFutureListener.CLOSE);
